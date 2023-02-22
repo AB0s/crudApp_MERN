@@ -5,11 +5,14 @@ import { Link } from "@pankod/refine-react-router-v6";
 
 import { AgentCardProp, InfoBarProps } from "interfaces/agent";
 
+//AGENT COMPONENT 
+
 function checkImage(url: any) {
     const img = new Image();
     img.src = url;
     return img.width !== 0 && img.height !== 0;
 }
+
 
 const InfoBar = ({ icon, name }: InfoBarProps) => (
     <Stack
@@ -111,4 +114,5 @@ const AgentCard = ({
     );
 };
 
+//HI GUYYYYYYYYYYYYYYYYYYYYYYYYYYS
 export default AgentCard;
