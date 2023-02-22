@@ -4,7 +4,7 @@ import { Container, Box } from "@pankod/refine-mui";
 
 import { yariga } from "../assets";
 
-import { CredentialResponse } from "../interfaces/google";
+import { CredentialResponse } from "../interfaces/google"; //SET UP CREDENTIALS TO COMMUNICATE WITH BACKEND SITE
 
 export const Login: React.FC = () => {
     const { mutate: login } = useLogin<CredentialResponse>();
@@ -39,11 +39,11 @@ export const Login: React.FC = () => {
             } catch (error) {
                 console.log(error);
             }
-        }, []); // you can also add your client id as dependency here
+        }, []);
 
         return <div ref={divRef} />;
     };
-
+    //LOGIN VIA GOOGLE API
     return (
         <Box component="div" sx={{ backgroundColor: "#FCFCFC" }}>
             <Container
